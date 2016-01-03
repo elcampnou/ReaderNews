@@ -17,6 +17,7 @@
 		BB810B531C38471800E5E93C /* NextFlymUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B521C38471800E5E93C /* NextFlymUITests.swift */; };
 		BB810B621C3848A400E5E93C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B611C3848A400E5E93C /* Constants.swift */; };
 		BB810B651C3848EA00E5E93C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B641C3848EA00E5E93C /* NetworkManager.swift */; };
+		BB810B671C391EF300E5E93C /* ArticleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B661C391EF200E5E93C /* ArticleParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BB810B541C38471800E5E93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB810B611C3848A400E5E93C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB810B641C3848EA00E5E93C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BB810B661C391EF200E5E93C /* ArticleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				BB810B641C3848EA00E5E93C /* NetworkManager.swift */,
+				BB810B661C391EF200E5E93C /* ArticleParser.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB810B321C38471800E5E93C /* ViewController.swift in Sources */,
+				BB810B671C391EF300E5E93C /* ArticleParser.swift in Sources */,
 				BB810B381C38471800E5E93C /* NextFlym.xcdatamodeld in Sources */,
 				BB810B651C3848EA00E5E93C /* NetworkManager.swift in Sources */,
 				BB810B301C38471800E5E93C /* AppDelegate.swift in Sources */,
