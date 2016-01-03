@@ -17,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let navVC = self.window!.rootViewController as? UINavigationController {
+            if let articleListVC = navVC.viewControllers.first as? ArticleListTableViewController {
+                articleListVC.context = self.managedObjectContext
+            }
+        }
+        
         return true
     }
 

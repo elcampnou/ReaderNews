@@ -9,13 +9,13 @@
         <!--News Reader-->
         <scene sceneID="PEr-Gx-OXV">
             <objects>
-                <tableViewController id="zIf-W5-W27" userLabel="News Reader" sceneMemberID="viewController">
+                <tableViewController id="zIf-W5-W27" userLabel="News Reader" customClass="ArticleListTableViewController" customModule="NextFlym" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="98" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ip-aM-Fuc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="VhJ-GM-2tt" userLabel="articleListCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleListCell" rowHeight="98" id="VhJ-GM-2tt" userLabel="articleListCell" customClass="ArticleListTableViewCell" customModule="NextFlym" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VhJ-GM-2tt" id="rTg-hw-8vD">
@@ -25,14 +25,14 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTY-Cv-60a" userLabel="Article Image View">
                                             <rect key="frame" x="8" y="8" width="109" height="81"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-2j-zc5" userLabel="Article Descr Label">
-                                            <rect key="frame" x="125" y="58" width="467" height="31"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3f-TA-eZT" userLabel="Article Title Label">
+                                            <rect key="frame" x="125" y="8" width="467" height="42"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3f-TA-eZT" userLabel="Article Title Label">
-                                            <rect key="frame" x="125" y="8" width="467" height="42"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78Y-2j-zc5" userLabel="Article Descr Label">
+                                            <rect key="frame" x="125" y="58" width="467" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -48,6 +48,11 @@
                                         <constraint firstItem="78Y-2j-zc5" firstAttribute="top" secondItem="u3f-TA-eZT" secondAttribute="bottom" constant="8" id="yiP-N6-lQv"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="articleDescriptionLabel" destination="78Y-2j-zc5" id="FPN-pA-sZC"/>
+                                    <outlet property="articleImageView" destination="aTY-Cv-60a" id="9FO-0v-qVw"/>
+                                    <outlet property="articleTitleLabel" destination="u3f-TA-eZT" id="Sdb-Qn-fyJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -57,7 +62,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="FlymReader" id="yXO-hT-a0x"/>
                     <connections>
-                        <segue destination="4G1-hz-HZ3" kind="show" id="veJ-of-wFW"/>
+                        <segue destination="4G1-hz-HZ3" kind="show" identifier="showArticleDetail" id="veJ-of-wFW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3H8-Pr-mlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,28 +72,28 @@
         <!--Article Detail-->
         <scene sceneID="7M1-Y4-V8d">
             <objects>
-                <viewController id="4G1-hz-HZ3" userLabel="Article Detail" sceneMemberID="viewController">
+                <viewController id="4G1-hz-HZ3" userLabel="Article Detail" customClass="ArticleDetailTableViewController" customModule="NextFlym" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tzq-kG-Qan">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="96" id="G8g-eV-bsz" userLabel="ArticleHeader">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleHeader" rowHeight="96" id="G8g-eV-bsz" userLabel="ArticleHeader" customClass="ArticleHeaderTableViewCell" customModule="NextFlym" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="96"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G8g-eV-bsz" id="MGY-La-xEJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRi-VC-iYg" userLabel="Article Image View">
-                                            <rect key="frame" x="8" y="8" width="113" height="79"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImW-fM-Rdl" userLabel="Article Label Label">
                                             <rect key="frame" x="129" y="8" width="463" height="79"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRi-VC-iYg" userLabel="Article Image View">
+                                            <rect key="frame" x="8" y="8" width="113" height="79"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ImW-fM-Rdl" firstAttribute="leading" secondItem="tRi-VC-iYg" secondAttribute="trailing" constant="8" id="KIg-ia-gzZ"/>
@@ -102,13 +107,17 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="tRi-VC-iYg" secondAttribute="bottom" constant="9" id="sAm-TK-EDp"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="articleImageView" destination="tRi-VC-iYg" id="k6m-Aa-Gcz"/>
+                                    <outlet property="articleTitleLabel" destination="ImW-fM-Rdl" id="CE0-Cw-ul6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6L-6W-Tze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="352"/>
+            <point key="canvasLocation" x="1870" y="352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhT-Dc-i9U">

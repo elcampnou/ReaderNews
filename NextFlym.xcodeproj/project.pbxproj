@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB810B301C38471800E5E93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B2F1C38471800E5E93C /* AppDelegate.swift */; };
-		BB810B321C38471800E5E93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B311C38471800E5E93C /* ViewController.swift */; };
 		BB810B351C38471800E5E93C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB810B331C38471800E5E93C /* Main.storyboard */; };
 		BB810B381C38471800E5E93C /* NextFlym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BB810B361C38471800E5E93C /* NextFlym.xcdatamodeld */; };
 		BB810B3A1C38471800E5E93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB810B391C38471800E5E93C /* Assets.xcassets */; };
@@ -21,6 +20,11 @@
 		BB810B6A1C392B5600E5E93C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B691C392B5600E5E93C /* Article.swift */; };
 		BB810B6C1C3931D000E5E93C /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B6B1C3931D000E5E93C /* Article+CoreDataProperties.swift */; };
 		BB810B6E1C3931FF00E5E93C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */; };
+		BB810B711C3947CB00E5E93C /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B701C3947CB00E5E93C /* ArticleListTableViewController.swift */; };
+		BB810B731C3948BB00E5E93C /* ArticleDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B721C3948BB00E5E93C /* ArticleDetailTableViewController.swift */; };
+		BB810B761C3949BE00E5E93C /* ArticleHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B751C3949BE00E5E93C /* ArticleHeaderTableViewCell.swift */; };
+		BB810B781C3949D900E5E93C /* ArticleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B771C3949D900E5E93C /* ArticleListTableViewCell.swift */; };
+		BB810B7B1C394E3E00E5E93C /* ViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B7A1C394E3E00E5E93C /* ViewController+Additions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +47,6 @@
 /* Begin PBXFileReference section */
 		BB810B2C1C38471800E5E93C /* NextFlym.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextFlym.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB810B2F1C38471800E5E93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB810B311C38471800E5E93C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB810B341C38471800E5E93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB810B371C38471800E5E93C /* NextFlym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NextFlym.xcdatamodel; sourceTree = "<group>"; };
 		BB810B391C38471800E5E93C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +64,11 @@
 		BB810B691C392B5600E5E93C /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		BB810B6B1C3931D000E5E93C /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		BB810B701C3947CB00E5E93C /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
+		BB810B721C3948BB00E5E93C /* ArticleDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailTableViewController.swift; sourceTree = "<group>"; };
+		BB810B751C3949BE00E5E93C /* ArticleHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		BB810B771C3949D900E5E93C /* ArticleListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewCell.swift; sourceTree = "<group>"; };
+		BB810B7A1C394E3E00E5E93C /* ViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +119,12 @@
 		BB810B2E1C38471800E5E93C /* NextFlym */ = {
 			isa = PBXGroup;
 			children = (
+				BB810B791C394E2E00E5E93C /* Extensions */,
 				BB810B6F1C39393E00E5E93C /* Controllers */,
 				BB810B681C392B1D00E5E93C /* Models */,
 				BB810B631C3848D500E5E93C /* API */,
 				BB810B601C38488200E5E93C /* Supporting File */,
 				BB810B2F1C38471800E5E93C /* AppDelegate.swift */,
-				BB810B311C38471800E5E93C /* ViewController.swift */,
 				BB810B331C38471800E5E93C /* Main.storyboard */,
 				BB810B391C38471800E5E93C /* Assets.xcassets */,
 				BB810B3B1C38471800E5E93C /* LaunchScreen.storyboard */,
@@ -174,8 +182,28 @@
 		BB810B6F1C39393E00E5E93C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB810B741C3949A400E5E93C /* Custom Cells */,
+				BB810B701C3947CB00E5E93C /* ArticleListTableViewController.swift */,
+				BB810B721C3948BB00E5E93C /* ArticleDetailTableViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BB810B741C3949A400E5E93C /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BB810B751C3949BE00E5E93C /* ArticleHeaderTableViewCell.swift */,
+				BB810B771C3949D900E5E93C /* ArticleListTableViewCell.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		BB810B791C394E2E00E5E93C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB810B7A1C394E3E00E5E93C /* ViewController+Additions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,13 +341,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB810B6A1C392B5600E5E93C /* Article.swift in Sources */,
-				BB810B321C38471800E5E93C /* ViewController.swift in Sources */,
 				BB810B671C391EF300E5E93C /* ArticleParser.swift in Sources */,
 				BB810B381C38471800E5E93C /* NextFlym.xcdatamodeld in Sources */,
 				BB810B6C1C3931D000E5E93C /* Article+CoreDataProperties.swift in Sources */,
+				BB810B761C3949BE00E5E93C /* ArticleHeaderTableViewCell.swift in Sources */,
 				BB810B651C3848EA00E5E93C /* NetworkManager.swift in Sources */,
+				BB810B731C3948BB00E5E93C /* ArticleDetailTableViewController.swift in Sources */,
+				BB810B7B1C394E3E00E5E93C /* ViewController+Additions.swift in Sources */,
 				BB810B6E1C3931FF00E5E93C /* CoreDataManager.swift in Sources */,
+				BB810B781C3949D900E5E93C /* ArticleListTableViewCell.swift in Sources */,
 				BB810B301C38471800E5E93C /* AppDelegate.swift in Sources */,
+				BB810B711C3947CB00E5E93C /* ArticleListTableViewController.swift in Sources */,
 				BB810B621C3848A400E5E93C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
