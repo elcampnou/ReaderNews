@@ -111,6 +111,7 @@
 		BB810B2E1C38471800E5E93C /* NextFlym */ = {
 			isa = PBXGroup;
 			children = (
+				BB810B6F1C39393E00E5E93C /* Controllers */,
 				BB810B681C392B1D00E5E93C /* Models */,
 				BB810B631C3848D500E5E93C /* API */,
 				BB810B601C38488200E5E93C /* Supporting File */,
@@ -168,6 +169,13 @@
 				BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		BB810B6F1C39393E00E5E93C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
