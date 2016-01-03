@@ -18,6 +18,9 @@
 		BB810B621C3848A400E5E93C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B611C3848A400E5E93C /* Constants.swift */; };
 		BB810B651C3848EA00E5E93C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B641C3848EA00E5E93C /* NetworkManager.swift */; };
 		BB810B671C391EF300E5E93C /* ArticleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B661C391EF200E5E93C /* ArticleParser.swift */; };
+		BB810B6A1C392B5600E5E93C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B691C392B5600E5E93C /* Article.swift */; };
+		BB810B6C1C3931D000E5E93C /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B6B1C3931D000E5E93C /* Article+CoreDataProperties.swift */; };
+		BB810B6E1C3931FF00E5E93C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		BB810B611C3848A400E5E93C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB810B641C3848EA00E5E93C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BB810B661C391EF200E5E93C /* ArticleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleParser.swift; sourceTree = "<group>"; };
+		BB810B691C392B5600E5E93C /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		BB810B6B1C3931D000E5E93C /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		BB810B2E1C38471800E5E93C /* NextFlym */ = {
 			isa = PBXGroup;
 			children = (
+				BB810B681C392B1D00E5E93C /* Models */,
 				BB810B631C3848D500E5E93C /* API */,
 				BB810B601C38488200E5E93C /* Supporting File */,
 				BB810B2F1C38471800E5E93C /* AppDelegate.swift */,
@@ -151,6 +158,16 @@
 				BB810B661C391EF200E5E93C /* ArticleParser.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		BB810B681C392B1D00E5E93C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB810B6B1C3931D000E5E93C /* Article+CoreDataProperties.swift */,
+				BB810B691C392B5600E5E93C /* Article.swift */,
+				BB810B6D1C3931FF00E5E93C /* CoreDataManager.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,10 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB810B6A1C392B5600E5E93C /* Article.swift in Sources */,
 				BB810B321C38471800E5E93C /* ViewController.swift in Sources */,
 				BB810B671C391EF300E5E93C /* ArticleParser.swift in Sources */,
 				BB810B381C38471800E5E93C /* NextFlym.xcdatamodeld in Sources */,
+				BB810B6C1C3931D000E5E93C /* Article+CoreDataProperties.swift in Sources */,
 				BB810B651C3848EA00E5E93C /* NetworkManager.swift in Sources */,
+				BB810B6E1C3931FF00E5E93C /* CoreDataManager.swift in Sources */,
 				BB810B301C38471800E5E93C /* AppDelegate.swift in Sources */,
 				BB810B621C3848A400E5E93C /* Constants.swift in Sources */,
 			);
